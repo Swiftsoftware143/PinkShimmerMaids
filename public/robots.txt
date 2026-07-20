@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and private pages
+Disallow: /admin/
+Disallow: /login/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /private/
+Disallow: /*?*
+
+# Sitemap location
+Sitemap: https://pinkshimmermaids.com/sitemap.xml

@@ -1,0 +1,109 @@
+.contact-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(to bottom, #ffffff 0%, #fef5f7 100%);
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact-description {
+  text-align: center;
+  font-size: 1.125rem;
+  color: #666;
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.contact-option {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.contact-option:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(253, 185, 200, 0.2);
+  border-color: #FDB9C8;
+}
+
+.option-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FDB9C8 0%, #FCA5B7 100%);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.contact-option:hover .option-icon-wrapper {
+  transform: rotate(360deg);
+}
+
+.option-icon {
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+
+.option-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.option-btn {
+  background: linear-gradient(135deg, #FDB9C8 0%, #FCA5B7 100%);
+  color: white;
+  font-weight: 600;
+  padding: 0.875rem 2.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 15px rgba(253, 185, 200, 0.3);
+}
+
+.option-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(253, 185, 200, 0.4);
+  background: linear-gradient(135deg, #FCA5B7 0%, #FB91A6 100%);
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 4rem 1rem;
+  }
+
+  .contact-title {
+    font-size: 2.25rem;
+  }
+
+  .contact-options {
+    grid-template-columns: 1fr;
+  }
+}

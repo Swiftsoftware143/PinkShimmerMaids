@@ -1,0 +1,247 @@
+/* City Page styles - Google Fonts loaded via index.html <link> tag */
+
+.city-page {
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: #333;
+  min-height: 100vh;
+}
+
+.city-page h1, .city-page h2, .city-page h3, .city-page h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Hero */
+.city-hero {
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
+  padding: 100px 20px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.city-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.3) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.city-hero h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  position: relative;
+}
+
+.city-hero p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 750px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
+  font-weight: 400;
+  position: relative;
+}
+
+.city-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #E75480;
+  color: #fff;
+  padding: 16px 36px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(231,84,128,0.3);
+  position: relative;
+}
+
+.city-cta-btn:hover {
+  background: #d43d6a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(231,84,128,0.4);
+}
+
+/* Content Sections */
+.city-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.city-section {
+  margin-bottom: 45px;
+}
+
+.city-section h2 {
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.city-section h2 svg {
+  color: #E75480;
+}
+
+/* Neighborhood Tags */
+.neighborhood-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.neighborhood-tag {
+  background: #fce4ec;
+  color: #c62828;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.neighborhood-tag:hover {
+  background: #f8bbd0;
+}
+
+/* Service Cards */
+.service-list {
+  display: grid;
+  gap: 12px;
+}
+
+.service-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 22px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s;
+}
+
+.service-item:hover {
+  border-color: #E75480;
+  box-shadow: 0 2px 12px rgba(231,84,128,0.08);
+}
+
+.service-item svg {
+  color: #E75480;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.service-item strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.service-item .keyword-hint {
+  font-size: 0.82rem;
+  color: #999;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+/* Hours + CTA Box */
+.city-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.hours-box {
+  padding: 28px;
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+  border-radius: 14px;
+}
+
+.hours-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.hours-box p {
+  font-size: 0.98rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.cta-box {
+  padding: 28px;
+  background: linear-gradient(135deg, #E75480, #d43d6a);
+  border-radius: 14px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cta-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.cta-box p {
+  margin-bottom: 14px;
+  opacity: 0.9;
+  font-size: 0.98rem;
+}
+
+.cta-box a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.cta-box a:hover {
+  text-decoration: underline;
+}
+
+/* Fallback city page */
+.city-fallback {
+  text-align: center;
+  padding: 120px 20px 60px;
+  min-height: 60vh;
+}
+
+.city-fallback h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.city-fallback p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.city-fallback a {
+  color: #E75480;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .city-hero { padding: 80px 20px 40px; }
+  .city-hero h1 { font-size: 1.7rem; }
+  .city-hero p { font-size: 1rem; }
+  .city-content { padding: 30px 16px; }
+  .city-section h2 { font-size: 1.4rem; }
+  .city-bottom { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,326 @@
+/* ===========================
+   Floating toggle button — Traditional ADA Blue
+   =========================== */
+.a11y-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 2147483000; /* above everything */
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  background: #1c64c4; /* traditional ADA blue */
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 6px 18px -4px rgba(28, 100, 196, 0.55),
+    0 2px 6px -1px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.a11y-toggle:hover {
+  background: #1758ad;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow:
+    0 10px 24px -4px rgba(28, 100, 196, 0.7),
+    0 4px 10px -2px rgba(0, 0, 0, 0.22);
+}
+
+.a11y-toggle:focus-visible {
+  outline: 3px solid #FDB9C8;
+  outline-offset: 3px;
+}
+
+/* ===========================
+   Panel
+   =========================== */
+.a11y-panel {
+  position: fixed;
+  bottom: 6.25rem;
+  left: 1.5rem;
+  z-index: 2147483000;
+  width: 340px;
+  max-width: calc(100vw - 3rem);
+  max-height: calc(100vh - 8rem);
+  overflow-y: auto;
+  background: linear-gradient(180deg, #ffffff 0%, #fff5f8 100%);
+  border: 1px solid rgba(253, 185, 200, 0.5);
+  border-radius: 18px;
+  box-shadow:
+    0 24px 70px -12px rgba(253, 185, 200, 0.5),
+    0 10px 30px -6px rgba(0, 0, 0, 0.12);
+  padding: 1.25rem;
+  animation: a11yPanelIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes a11yPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.a11y-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(253, 185, 200, 0.4);
+}
+
+.a11y-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.a11y-subtitle {
+  font-size: 0.75rem;
+  color: #777;
+  margin: 0.15rem 0 0 0;
+}
+
+.a11y-close {
+  background: transparent;
+  border: none;
+  color: #777;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.a11y-close:hover,
+.a11y-close:focus-visible {
+  color: #FDB9C8;
+  background: rgba(253, 185, 200, 0.15);
+  outline: none;
+}
+
+/* ===========================
+   Option grid
+   =========================== */
+.a11y-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+
+.a11y-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.85rem 0.5rem;
+  border-radius: 12px;
+  background: #fff;
+  border: 1.5px solid rgba(253, 185, 200, 0.4);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease,
+              transform 0.15s ease, box-shadow 0.2s ease;
+  font-family: inherit;
+}
+
+.a11y-option:hover {
+  border-color: #FDB9C8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -4px rgba(253, 185, 200, 0.4);
+}
+
+.a11y-option:focus-visible {
+  outline: 2px solid #2d2d2d;
+  outline-offset: 2px;
+}
+
+.a11y-option.is-active {
+  background: linear-gradient(135deg, #FDB9C8 0%, #FCA5B7 100%);
+  border-color: #FDB9C8;
+  color: white;
+  box-shadow: 0 6px 14px -4px rgba(253, 185, 200, 0.7);
+}
+
+.a11y-option-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FDB9C8;
+  margin-bottom: 0.15rem;
+}
+
+.a11y-option.is-active .a11y-option-icon {
+  color: white;
+}
+
+.a11y-option-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  line-height: 1.2;
+}
+
+.a11y-option.is-active .a11y-option-label {
+  color: white;
+}
+
+.a11y-option-sub {
+  font-size: 0.68rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.a11y-option.is-active .a11y-option-sub {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===========================
+   Reset + footnote
+   =========================== */
+.a11y-reset {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1rem;
+  border-radius: 9999px;
+  background: transparent;
+  color: #2d2d2d;
+  border: 1.5px solid rgba(253, 185, 200, 0.7);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  margin-bottom: 0.65rem;
+}
+
+.a11y-reset:hover,
+.a11y-reset:focus-visible {
+  background: rgba(253, 185, 200, 0.15);
+  border-color: #FDB9C8;
+  outline: none;
+}
+
+.a11y-footnote {
+  font-size: 0.7rem;
+  color: #999;
+  margin: 0;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ===========================
+   Mobile
+   =========================== */
+@media (max-width: 640px) {
+  .a11y-toggle {
+    bottom: 1rem;
+    left: 1rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  .a11y-panel {
+    bottom: 5rem;
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    max-width: none;
+  }
+}
+
+/* ===========================================
+   GLOBAL ACCESSIBILITY EFFECTS
+   Applied to #root only — widget lives outside
+   #root via React portal so it stays unaffected.
+   =========================================== */
+
+html {
+  --a11y-font-scale: 1;
+}
+
+#root {
+  font-size: calc(1rem * var(--a11y-font-scale, 1));
+}
+
+/* High contrast */
+html[data-a11y-contrast="high"] #root {
+  filter: contrast(1.35) saturate(1.1);
+}
+
+/* Inverted */
+html[data-a11y-contrast="inverted"] #root {
+  filter: invert(1) hue-rotate(180deg);
+}
+html[data-a11y-contrast="inverted"] #root img,
+html[data-a11y-contrast="inverted"] #root video,
+html[data-a11y-contrast="inverted"] #root svg {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Grayscale */
+html[data-a11y-grayscale="on"] #root {
+  filter: grayscale(1);
+}
+
+/* Combine grayscale + inverted */
+html[data-a11y-contrast="inverted"][data-a11y-grayscale="on"] #root {
+  filter: invert(1) hue-rotate(180deg) grayscale(1);
+}
+
+/* Combine grayscale + high contrast */
+html[data-a11y-contrast="high"][data-a11y-grayscale="on"] #root {
+  filter: contrast(1.35) saturate(1.1) grayscale(1);
+}
+
+/* Highlight links — only inside #root, not the widget */
+html[data-a11y-highlight-links="on"] #root a,
+html[data-a11y-highlight-links="on"] #root button {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 2px !important;
+  outline: 2px dashed #FDB9C8 !important;
+  outline-offset: 2px !important;
+}
+
+/* Readable font — only inside #root */
+html[data-a11y-readable-font="on"] #root,
+html[data-a11y-readable-font="on"] #root * {
+  font-family: 'Verdana', 'Arial', sans-serif !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.6 !important;
+}
+
+/* Big cursor — global since cursor follows the mouse */
+html[data-a11y-big-cursor="on"],
+html[data-a11y-big-cursor="on"] * {
+  cursor:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'><path d='M2 2 L2 32 L10 24 L14 36 L20 34 L16 22 L28 22 Z' fill='%23000' stroke='%23fff' stroke-width='2'/></svg>") 2 2, auto !important;
+}
+
+/* Pause animations — inside #root only, so panel animation still works */
+html[data-a11y-pause-animations="on"] #root *,
+html[data-a11y-pause-animations="on"] #root *::before,
+html[data-a11y-pause-animations="on"] #root *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
