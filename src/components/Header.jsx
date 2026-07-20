@@ -28,7 +28,7 @@ const Header = () => {
       <div className="header-container">
         <div className="header-logo">
           <img 
-            src="/images/logo.svg" 
+            src="/logo.svg" 
             alt="The Pink Shimmer Maids"
             className="logo-image"
           />
