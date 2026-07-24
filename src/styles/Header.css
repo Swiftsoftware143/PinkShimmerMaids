@@ -32,7 +32,7 @@
 }
 
 .header-logo .logo-image {
-  height: 216px;
+  height: 110px;
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
@@ -44,7 +44,7 @@
 }
 
 .header.scrolled .logo-image {
-  height: 170px;
+  height: 85px;
 }
 
 .header-nav {
